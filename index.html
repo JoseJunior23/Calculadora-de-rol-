@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+  <title> Calculadora de rolê</title>
+</head>
+
+<body>
+  <header>
+    <h1>Calculadora de Rolê</h1>
+    <p> Simule quanto gastará em seu rolê adicionando e selecionando os campos abaixo</p>
+  </header>
+  <div id="topo">
+    <form>
+      <div>
+        <label>Numero de bares que quero ir: </label>
+        <input type="number" id="nb" placeholder="Qtd de bares" />
+      </div>
+      <div>
+        <label>Nivel dos bares que quero ir:</label>
+        <select id="nib">
+          <option value="0">selecione uma opção abaixo</option>
+          <option value="1">Litrão da esquina</option>
+          <option value="2"> Gim Tônica do centro</option>
+          <option value="3">Rooftop</option>
+        </select>
+      </div>
+      <div>
+        <label>Número de baladas quero ir :</label>
+        <input type="number" id="nba" placeholder="Qtd baladas" />
+      </div>
+      <div>
+        <label> Nível das baladas que quero ir:</label>
+        <select id="niba">
+          <option value="0">selecione uma opção abaixo</option>
+          <option value="1">Padrão</option>
+          <option value="2">Rei do Camarote</option>
+        </select>
+      </div>
+      <div>
+        <label> Nível de sede do rolê:</label>
+        <select id="nis">
+          <option value="0">selecione uma opção abaixo</option>
+          <option value="1"> Social</option>
+          <option value="2"> Comemoração</option>
+          <option value="3"> Esquecer Ex</option>
+        </select>
+      </div>
+      <div>
+        <label> Quilometros rodados de Uber:</label>
+        <input type="number" id="km" placeholder="Km de Uber" />
+      </div>
+      <div>
+        <label> Dia do rolê:</label>
+        <select id="dia">
+          <option value="0">selecione uma opção</option>
+          <option value="1">Dia de semana</option>
+          <option value="2">Sexta</option>
+          <option value="3">sabado</option>
+          <option value="4">Domingo</option>
+        </select>
+      </div>
+      <div>
+        <label>Outros gastos:</label>
+        <input type="number" id="adicionais" placeholder=" Gastos adicionais" />
+      </div>
+    </form>
+  </div>
+  <div id="resultado"></div>
+  <div id="btnCalc">
+    <button id="btn"> Calcular Rolê</button>
+  </div>
+  <footer>
+    <p>Desenvolvido por: </p>
+    <p id="copyright"> © 2021</p>
+  </footer>
+  <script src="calculadora.js"></script>
+</body>
+
+</html>
