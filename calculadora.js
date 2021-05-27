@@ -59,7 +59,7 @@ function calcular() {
     nivel_balada = 3
   }
 
-  if (nivel_sede < 0) {
+  if (!nivel_sede) {
     alert('selecione uma opção de nivel de sede!!!');
     elemNivel_sede.focus();
     return
@@ -78,7 +78,7 @@ function calcular() {
     elemKm.focus();
     return
   }
-  if (dia < 0) {
+  if (!dia) {
     alert('selecione uma opção de dia do rolê');
     elemDia.focus();
     return
