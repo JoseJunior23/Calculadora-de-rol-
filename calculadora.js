@@ -22,17 +22,18 @@ function calcular() {
   let adicionais = elemAdicionais.value;
 
   // Validação entrada de dados
-  if (isNaN(bares) || (!bares)) {
+  // controle do input relacionado ao bar 
+  if (bares < 0 || isNaN(bares)) {
     alert('Opção "quantidade de bares " não selecionada ou valor invalido!!!');
     elemQtd_bares.focus()
     return;
   }
-  if (!nivel_bar) {
+  if (nivel_bar < 0) {
     alert('selecione uma opção de nivel do bar !!!');
     elemNivel_bar.focus();
     return
   }
-  console.log(nivel_bar)
+
   if (nivel_bar == 1) {
     nivel_bar = 1.1
   } else if (nivel_bar == 2) {
@@ -41,12 +42,12 @@ function calcular() {
     nivel_bar = 2.2
   }
 
-  if (!baladas || isNaN(baladas) || baladas < 0) {
+  if (isNaN(baladas) || baladas < 0) {
     alert('Quantidade de baladas não selecionada ou valor invalido!!!');
     elemNivel_sede.focus();
     return
   }
-  if (!nivel_balada) {
+  if (nivel_balada < 0) {
     alert('selecione uma opção de nivel de balada');
     elemNivel_balada.focus();
     return
@@ -58,7 +59,7 @@ function calcular() {
     nivel_balada = 3
   }
 
-  if (!nivel_sede) {
+  if (nivel_sede < 0) {
     alert('selecione uma opção de nivel de sede!!!');
     elemNivel_sede.focus();
     return
@@ -72,12 +73,12 @@ function calcular() {
     nivel_sede == 2.5
   }
 
-  if (isNaN(uber) || uber < 0 || !uber) {
+  if (isNaN(uber) || uber < 0) {
     alert('Opção Uber não selecionado ou valor invalido!!!');
     elemKm.focus();
     return
   }
-  if (!dia) {
+  if (dia < 0) {
     alert('selecione uma opção de dia do rolê');
     elemDia.focus();
     return
